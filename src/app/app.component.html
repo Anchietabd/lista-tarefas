@@ -1,0 +1,10 @@
+<div style="text-align:center">
+  <input type="text" #novaTarefa (keyup.enter)="adicionarTarefa(novaTarefa.value); novaTarefa.value = '';">
+  <input type="submit" (click)="adicionarTarefa(novaTarefa.value); novaTarefa.value = '';">
+  <table>
+    <tr *ngFor="let tarefa of tarefas">
+      <td>{{tarefa}}</td>
+      <td><input type="submit" (click)="excluirTarefa(tarefa)" value="X"></td>
+    </tr>
+  </table>
+</div>
